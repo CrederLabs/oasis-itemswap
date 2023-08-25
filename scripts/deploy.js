@@ -7,10 +7,6 @@
 const hre = require("hardhat");
 
 async function main() {
-  // let tGPC = await hre.ethers.deployContract("DevERC20", ["Test Gold Pegged Coin", "tGPC"]);
-  // await tGPC.waitForDeployment();
-  // console.log("deployed GPC");
-
   const [owner, otherAccount] = await ethers.getSigners();
   console.log("owner: ", owner.address);
 
@@ -21,14 +17,11 @@ async function main() {
   await itemswap.waitForDeployment();
   console.log("deployed itemswap");
 
-  
-  
   let itemUSDPriceWei = await itemswap.getItemUSDPrice(0);
   console.log("itemUSDPriceWei: ", itemUSDPriceWei);
   // 3.1 USD
   let itemUSDPrice = hre.ethers.formatEther(itemUSDPriceWei);
   console.log("itemUSDPrice: ", itemUSDPrice);
-
 
   // item 당 ROSE 환산 가격
   let roseUSDPrice = await itemswap.roseUSDPrice();
@@ -97,27 +90,6 @@ async function main() {
   // item 판매후 아이템 판매가
   let itemPriceBaseRose5 = await itemswap.getItemROSEPrice(1);
   console.log("item 판매후 아이템 판매가: ", itemPriceBaseRose5);
-
-  // item 판매후 유저 ROSE 
-
-
-  
-  // const currentTimestampInSeconds = Math.round(Date.now() / 1000);
-  // const unlockTime = currentTimestampInSeconds + 60;
-
-  // const lockedAmount = hre.ethers.parseEther("0.001");
-
-  // const lock = await hre.ethers.deployContract("Lock", [unlockTime], {
-  //   value: lockedAmount,
-  // });
-
-  // await lock.waitForDeployment();
-
-  // console.log(
-  //   `Lock with ${ethers.formatEther(
-  //     lockedAmount
-  //   )}ETH and unlock timestamp ${unlockTime} deployed to ${lock.target}`
-  // );
 }
 
 // We recommend this pattern to be able to use async/await everywhere
