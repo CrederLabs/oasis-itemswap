@@ -17,7 +17,8 @@
 
 .arrowDown {
     text-align: center;
-    margin-top: 25px;
+    margin-top: 20px;
+    margin-bottom: -12px;
 }
 
 .sellCard {
@@ -44,4 +45,55 @@
     font-family: sans-serif !important;
     color: gray !important;
     float: right !important;
+}
+
+.myRoseBalance {
+    font-size: 14px !important;
+    font-family: sans-serif !important;
+    color: gray !important;
+    float: right !important;
+}
+
+.myItemBalance {
+    font-size: 14px !important;
+    font-family: sans-serif !important;
+    color: gray !important;
+    float: right !important;
+}
+
+.myItemBalanceValue {
+    font-size: 14px !important;
+    font-family: sans-serif !important;
+    color: gray !important;
+    float: right !important;
+}
+
+.myRoseBalanceValue {
+    font-size: 14px !important;
+    font-family: sans-serif !important;
+    color: gray !important;
+    float: right !important;
+}
+
+.gap {
+    margin-right: 30px;
+}
+
+.gamfi-footer-section .footer-cta-area {
+    padding: 60px 0 15px 0 !important;
+}
+
+.topGap {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.staking_flip_card_back {
+    background: rgb(36 38 102 / 70%) !important;
+}
+
+.logout {
+    display: none;
+    margin-left: 30px;
+    cursor: pointer;
 }

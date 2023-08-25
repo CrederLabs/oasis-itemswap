@@ -56,6 +56,7 @@
                                 <ul class="nav-menu">
                                     <li class="mega_menu_hov"><a href="#">Home</a></li>
                                     <li class="mega_menu_hov"><a href="https://github.com/CrederLabs" target="_blank">Github +</a></li>
+                                    <li class="mega_menu_hov">1 tROSE = $3.935<span class="gap"></span>1 tGPC = $0.62</li>
                                     <!-- <li>
                                         <button type="button" class="connect-btn readon white-btn hover-shape" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="assets/images/icons/connect.png" alt="Icon"> 
                                             <span class="btn-text">Connect </span>
@@ -70,49 +71,14 @@
 
                         <div>
                             <button type="button" class="connect-btn readon white-btn hover-shape" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="assets/images/icons/connect.png" alt="Icon"> 
-                                <span class="btn-text">Connect </span>
+                                <span class="btn-text">Connect</span>
                                 <span class="hover-shape1"></span>
                                 <span class="hover-shape2"></span>
                                 <span class="hover-shape3"></span>
                             </button>
-                        </div>
 
-                        <!-- <div class="gamfi-btn-area">
-                            <ul>
-                                <li>
-                                    <a id="nav-expander" class="nav-expander bar" href="#">
-                                        <div class="bar">
-                                            <span class="dot1"></span>
-                                            <span class="dot2"></span>
-                                            <span class="dot3"></span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="buy-token">
-                                    <a class="readon black-shape" href="#">
-                                        <span class="btn-text">Buy Token </span>
-                                        <i class="icon-arrow_down"></i>
-                                        <span class="hover-shape1"></span>
-                                        <span class="hover-shape2"></span>
-                                        <span class="hover-shape3"></span>
-                                    </a>
-                                    <ul>
-                                        <li><a href="#"><img src="assets/images/icons/pancake.png" alt="pancake"> PancakeSwap</a></li>
-                                        <li><a href="#"><img src="assets/images/icons/uniswap.png" alt="uniswap"> UniSwap</a></li>
-                                        <li><a href="#"><img src="assets/images/icons/market.png" alt="market"> CoinMarketCap</a></li>
-                                        <li><a href="#"><img src="assets/images/icons/gate.png" alt="gate"> Gate.io</a></li>
-                                    </ul>
-                                </li>
-                                <li class="connect-btn-wrapper">
-                                    <button type="button" class="connect-btn readon white-btn hover-shape" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="assets/images/icons/connect.png" alt="Icon"> 
-                                        <span class="btn-text">Connect </span>
-                                        <span class="hover-shape1"></span>
-                                        <span class="hover-shape2"></span>
-                                        <span class="hover-shape3"></span>
-                                    </button>
-                                </li>
-                            </ul>
-                        </div> -->
+                            <span class="userAddress"></span><span class="logout" onclick="window.location.reload()">Logout</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -144,7 +110,7 @@
                                 <ul>
                                     <li class="text-right">
                                         <h6>Total Liquidity</h6>
-                                        <h5><span class="counter">124515.73</span> USD</h5>
+                                        <h5><span class="counter tvl">0</span> USD</h5>
                                     </li>
                                 </ul>
                             </div>
@@ -165,7 +131,7 @@
                             <div class="staking_flip_card_inner">
                                 <div class="staking_flip_card_front p-0">
                                     <div class="lq_flip_card_headings">
-                                        <h2><span><img src="assets/images/icons/Tokens6.png" alt="icon" /></span>HP Potion - ROSE</h2>
+                                        <h2><span><img src="assets/images/icons/Tokens6.png" alt="icon" /></span>Potion-ROSE (Buy)</h2>
                                         <!-- <h3>15% APY</h3> -->
                                         <span class="staking_header_shape"><img src="assets/images/bg/staking_header_shape.png" alt="img" /></span>
                                     </div>
@@ -175,26 +141,26 @@
 
                                             <div class="staking_flip_card_back_form lq_flip_card_back_form">
                                                 <form>
-                                                    <span>Buy</span>
+                                                    <span>ROSE</span>
                                                     <div class="staking_flip_card_back_form_input">
-                                                        <input type="text" placeholder="0.00 ROSE">
-                                                        <button type="button">Max</button>
+                                                        <input class="roseInputTagForBuy" type="text" placeholder="0.00 ROSE" readonly>
+                                                        <!-- <button type="button">Max</button> -->
                                                     </div>
-                                                    <span class="myBalanceSmall">Balance: 0</span>
+                                                    <span class="myRoseBalance">Balance: <span class="myRoseBalanceValue">0</span></span>
                                                 </form>
                                                 <div class="arrowDown">↓</div>
                                                 <form>
-                                                    <!-- <span>ROSE</span> -->
+                                                    <span>HP Potion</span>
                                                     <div class="staking_flip_card_back_form_input">
-                                                        <input type="text" placeholder="0 HP Potion">
-                                                        <button type="button">Max</button>
+                                                        <input class="itemInputTag" type="text" placeholder="0 HP Potion" value="" readonly>
+                                                        <!-- <button type="button">Max</button> -->
                                                     </div>
-                                                    <span class="myBalanceSmall">Balance: 0</span>
+                                                    <span class="myItemBalance">Balance: <span class="myItemBalanceValue">0</span></span>
                                                 </form>
                                             </div>
                                             <br /><br />
                                             <div class="staking_flip_card_front_buttons">
-                                                <button class="black-shape-big btn_purple w-100">
+                                                <button class="black-shape-big btn_purple w-100" onclick="buy()">
                                                     Buy
                                                     <span class="hover-shape1"></span>
                                                     <span class="hover-shape2"></span>
@@ -211,7 +177,7 @@
                                 </div>
                                 <div class="staking_flip_card_back p-0">
                                     <div class="lq_flip_card_headings">
-                                        <h2><span><img src="assets/images/icons/Tokens6.png" alt="icon" /></span>HP Potion - ROSE</h2>
+                                        <h2><span><img src="assets/images/icons/Tokens6.png" alt="icon" /></span>Potion-ROSE (Sell)</h2>
                                         <!-- <h3>15% APY</h3> -->
                                         <span class="staking_header_shape"><img src="assets/images/bg/staking_header_shape.png" alt="img" /></span>
                                     </div>
@@ -219,26 +185,26 @@
                                     <div class="sellCard">
                                         <div class="staking_flip_card_back_form lq_flip_card_back_form">
                                             <form>
-                                                <span>Sell</span>
+                                                <span>HP Potion</span>
                                                 <div class="staking_flip_card_back_form_input">
-                                                    <input type="text" placeholder="0 HP Potion">
-                                                    <button type="button">Max</button>
+                                                    <input class="itemInputTag" type="text" placeholder="0 HP Potion" readonly>
+                                                    <!-- <button type="button">Max</button> -->
                                                 </div>
-                                                <span class="myBalanceSmall">Balance: 0</span>
+                                                <span class="myItemBalance">Balance: <span class="myItemBalanceValue">0</span></span>
                                             </form>
                                             <div class="arrowDown">↓</div>
                                             <form>
-                                                <!-- <span>ROSE</span> -->
+                                                <span>ROSE</span>
                                                 <div class="staking_flip_card_back_form_input">
-                                                    <input type="text" placeholder="0.00 ROSE">
-                                                    <button type="button">Max</button>
+                                                    <input class="roseInputTagForSell" type="text" placeholder="0.00 ROSE" readonly>
+                                                    <!-- <button type="button">Max</button> -->
                                                 </div>
-                                                <span class="myBalanceSmall">Balance: 0</span>
+                                                <span class="myRoseBalance">Balance: <span class="myRoseBalanceValue">0</span></span>
                                             </form>
                                         </div>
                                         <br /><br />
                                         <div class="staking_flip_card_front_buttons">
-                                            <button class="black-shape-big btn_purple w-100">
+                                            <button class="black-shape-big btn_purple w-100" onclick="sell()">
                                                 Sell
                                                 <span class="hover-shape1"></span>
                                                 <span class="hover-shape2"></span>
@@ -294,32 +260,35 @@
             </div>
         </div>
         <!-- staking_flip_card_sect end -->
-        
-         <!-- Footer Section Start -->
-         <div class="gamfi-footer-section">
-            <div class="footer-area">
-                <div class="container">
-                    <div class="sec-heading text-center">
-                        <div class="sub-inner mb-52">
-                            <img class="heading-right-image" src="assets/images/icons/steps2.png" alt="Steps-Image"/>
-                            <span class="sub-title white-color">GLITCH/HACKATHON 2023 - Game Infra/Tool Demo</span>
-                            <img class="heading-left-image" src="assets/images/icons/steps.png" alt="Steps-Image"/>
-                        </div>
-                    </div>
-                    <div class="footer-logo text-center mb-45">
-                       <a href="index.html">
-                            <img src="assets/images/crederLogo.png" alt="Footer-logo" class="crederLogo" />
-                       </a>
-                    </div>
-                    <div class="scrollup text-center">
-                        <a href="#">
-                            <i class="icon-arrow_up"></i>
-                        </a>
-                    </div>
+        <div class="gamfi-footer-section">
+            <div class="container">
+                <div class="footer-cta-area text-center active-shape hover-shape-inner">
+                    <h2 class="title mb-15">
+                        GLITCH / HACKATHON 2023<br>
+                        <img src="assets/images/crederLogo.png" alt="Footer-logo" class="crederLogo" />
+                    </h2>
+                    <p class="dsc mb-40">
+                        Please add the Oasis Emerald Testnet network to Metamask. https://docs.oasis.io/dapp/emerald/
+                    </p>
+                    <span class="border-shadow shadow-1"></span>
+                    <span class="border-shadow shadow-2"></span>
+                    <span class="border-shadow shadow-3"></span>
+                    <span class="border-shadow shadow-4"></span>
+                    <span class="hover-shape-bg hover_shape1"></span>
+                    <span class="hover-shape-bg hover_shape2"></span>
+                    <span class="hover-shape-bg hover_shape3"></span>
                 </div>
             </div>
+            <br /><br /><br />
+            <div class="text-center">
+                <div class="sub-inner mb-52">
+                    <img class="heading-right-image" src="assets/images/icons/steps2.png" alt="Steps-Image"/>
+                    <span class="sub-title white-color">GLITCH / HACKATHON 2023 - Game Infra/Tool Demo</span>
+                    <img class="heading-left-image" src="assets/images/icons/steps.png" alt="Steps-Image"/>
+                </div>
+            </div>
+            <br />
         </div>
-        <!-- Footer Section End -->
 
         <!-- Modal Section Start-->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -336,7 +305,7 @@
                         <div class="connect-section">
                             <ul class="heading-list">
                                 <li>
-                                    <a href="#" class="connect-meta">
+                                    <a href="javascript:connectOasisWallet();" class="connect-meta">
                                         <span>
                                             <img src="assets/images/icons/meta-mask.png" alt="Meta-mask-Image">
                                         </span>
@@ -407,6 +376,8 @@
         <script src="assets/js/metamaskhandler.js"></script>
         <!-- main js -->
         <script src="assets/js/main.js"></script>
+        <!-- ethers js -->
+        <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
         <!-- swap js -->
         <script src="assets/js/swap.js"></script>
     </body>
