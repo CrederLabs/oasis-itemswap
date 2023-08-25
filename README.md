@@ -1,6 +1,6 @@
 # Oasis Hackathon - Itemswap (Creder)
 
-![스크린샷 2023-08-25 오후 8 16 25](https://github.com/CrederLabs/oasis-itemswap/assets/34641838/0ef55f95-b849-46dd-8738-390aeee6c550)
+![스크린샷 2023-08-25 오후 8 16 25](https://github.com/CrederLabs/oasis-itemswap/assets/34641838/d39df4ae-c1d3-4d0d-81a7-90625cd2a25e)
 
 This is the Oasis hackathon Itemswap project.
 
