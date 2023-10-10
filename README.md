@@ -14,9 +14,6 @@ npx hardhat node
 npx hardhat run scripts/deploy.js
 ```
 
-## Demo
-- URL: https://test.d225n555andr1l.amplifyapp.com/
-
 ## Creder's Services and Community
 
 - [Official Website](https://www.creder.biz)
